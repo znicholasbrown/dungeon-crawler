@@ -14,5 +14,5 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build"
   },
-  "homepage": "http://znicholasbrown.github.io/camper-leaderboard"
+  "homepage": "http://znicholasbrown.github.io/dungeon-crawler"
 }
