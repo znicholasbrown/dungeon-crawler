@@ -1,24 +1,182 @@
-.App {
+body {
+    background-color: black;
+}
+.app {
   text-align: center;
+  font-family: "SimSun", fantasy;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.logo {
+  animation: logo-spin infinite 5s linear;
   height: 80px;
 }
+@keyframes logo-spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.header {
+  height: 80px;
+  font-size: 28px;
   color: white;
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.restart {
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  height: 35px;
+  width: 150px;
+  margin: auto;
+  position: fixed;
+  background-color: gray;
+  border: 1px solid darkgray;
+  
+}
+.restart:focus {
+  outline: none;
+}
+.restart:active {
+  bottom: 24px;
+}
+.player-stats-box {
+  width: 295px;
+  position: absolute;
+  color: white;
+  text-align: left;
+  top: 65px;
+  left: 15px;
+  background-color: rgba(0,0,0, 0.4);
+  z-index: 50;
 }
 
-.App-intro {
-  font-size: large;
+.enemy-stats-box {
+  width: 295px;
+  position: absolute;
+  color: white;
+  text-align: right;
+  top: 65px;
+  right: 15px;
+  background-color: rgba(0,0,0, 0.4);
+  z-index: 50;
+}
+.messages-box {
+  width: 600px;
+  border: 1px solid white;
+  background-color: rgba(0,0,0, 0.4);
+  padding: 5px;
+  position: absolute;
+  color: white;
+  text-align: left;
+  bottom: 50px;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.world {
+  height: 700px;
+  width: 700px;
+  position: absolute;
+  border-radius: 20px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+.world:focus {
+  outline: none;
+}
+.view {
+  height: 600px;
+  width: 600px;
+  border-radius: 20px;
+  position: relative;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 3;
+}
+
+.tile {
+  float: left;
+  height: 30px;
+  width: 30px;
+  z-index: 5;
+  background-color: #A1887F;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.wall {
+  background-color: #333333;
+  border: 1px solid transparent;
+}
+
+.floor {
+  background-color: #A1887F;
+}
+
+.boss {
+  background-image: url("boss.png");
+  background-size: 30px 30px;
+}
+.boss-dead {
+  background-image: url("boss-dead.png");
+  background-size: 30px 30px;
+}
+
+.player {
+  background-image: url("helmet.png");
+  background-size: 30px 30px;
+}
+.player-dead {
+  background-image: url("skull.png");
+  background-size: 30px 30px;
+}
+
+.enemy {
+  background-image: url("skull.png");
+  background-size: contain;
+}
+.soldier {
+  background-image: url("soldier.png");
+  background-size: 30px 30px;
+  background-position: center;
+}
+.weapon {
+  background-image: url("blue-sword.png");
+  background-size: contain;
+}
+
+.health {
+  background-image: url("health.png");
+  background-size: contain;
+}
+.fog {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 15;
+  background: rgba(0,0,0, 0); /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, transparent, black); /* Safari */
+  background: -o-radial-gradient(circle, transparent, black); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, transparent, black); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, transparent 20%, black 80%); /* Standard syntax */
+  pointer-events: none;
 }

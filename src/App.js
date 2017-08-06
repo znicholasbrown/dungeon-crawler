@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './icon-sword.svg';
 import './App.css';
+import World from './world.js';
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div className="app">
+        <div className="header">
+          <h2>Dungeon <img src={logo} className="logo" alt="logo" /> Crawler</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="app-components">
+          <World/>
+        </div>
       </div>
     );
   }
 }
+
 
 export default App;
